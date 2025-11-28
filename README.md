@@ -1,4 +1,4 @@
-# 📘 Phân Tích Cảm Xúc Bình Luận (Sentiment Analysis Project)
+# 📘 Phân Tích Cảm Xúc Bình Luận Tiếng Việt (Vietnamese Sentiment Analysis)
 
 Dự án xây dựng hệ thống AI tự động phân loại cảm xúc từ văn bản tiếng Việt sử dụng mô hình ngôn ngữ lớn **PhoBERT**.
 
@@ -23,13 +23,59 @@ Dự án bao gồm các thành phần mã nguồn chính sau đây:
     3.  **UI Rendering:** Khởi tạo giao diện web bằng `Gradio`, hiển thị kết quả dự đoán (Tích cực/Tiêu cực/Trung lập) và độ tin cậy.
 
 ### 📦 Module 3: Quản lý Thư viện (`requirements.txt`)
-* **Chức năng:** Liệt kê danh sách các thư viện Python và phiên bản cụ thể cần thiết để chạy dự án (Torch, Transformers, Gradio, Scikit-learn...).
+* **Chức năng:** Liệt kê danh sách các thư viện Python và phiên bản cụ thể cần thiết để chạy dự án (Torch, Transformers, Gradio, Scikit-learn, Underthesea...).
 
 ---
 
 ## ⚙️ 2. Hướng Dẫn Cài Đặt (Installation)
 
-**Bước 1: Clone dự án**
+**Bước 1: Clone dự án về máy**
 ```bash
 git clone [https://github.com/Quoc-Dai2005/sentiment-analysis-project.git](https://github.com/Quoc-Dai2005/sentiment-analysis-project.git)
 cd sentiment-analysis-project
+Bước 2: Tạo môi trường ảo (Khuyến dùng)
+
+Bash
+
+python -m venv venv
+# Windows:
+.\venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+Bước 3: Cài đặt thư viện
+
+Bash
+
+pip install -r requirements.txt
+🚀 3. Hướng Dẫn Sử Dụng (Usage)
+Cách 1: Huấn luyện lại mô hình (Training)
+Nếu bạn muốn train lại từ đầu với dữ liệu mới:
+
+Đảm bảo file dữ liệu nằm tại data/comments.csv.
+
+Mở file trainer-ai.ipynb bằng Jupyter Notebook hoặc VS Code.
+
+Chọn Run All để chạy toàn bộ quá trình.
+
+Sau khi xong, model mới sẽ được lưu tự động tại thư mục my_phobert_sentiment.
+
+Cách 2: Chạy ứng dụng Demo (Web App)
+Để mở giao diện web chat:
+
+Mở Terminal tại thư mục gốc dự án.
+
+Chạy lệnh:
+
+Bash
+
+python app.py
+Truy cập đường link hiển thị trên màn hình (thường là http://127.0.0.1:7860) trên trình duyệt web.
+
+⚠️ Lưu ý kỹ thuật
+GPU: Quá trình train yêu cầu GPU (NVIDIA T4/P100 trở lên) để đạt tốc độ tốt nhất. Nếu chạy CPU sẽ rất chậm.
+
+Dữ liệu: File CSV đầu vào cần có 2 cột chính: rating (số sao) và content (nội dung bình luận).
+
+Model: Model PhoBERT-Large sau khi train có dung lượng >1GB, nên không được upload trực tiếp lên GitHub mà phải lưu cục bộ hoặc dùng Git LFS.
+
+Tác giả: Quốc Đại (VNU-HUS)
