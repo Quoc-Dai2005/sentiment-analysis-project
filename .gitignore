@@ -1,0 +1,12 @@
+venv/
+env/
+.env
+__pycache__/
+*.pyc
+*.ipynb_checkpoints/
+*.bin
+*.pth
+*.safetensors
+results_phobert/
+my_phobert_sentiment/
+my-phobert-sentiment-final/
