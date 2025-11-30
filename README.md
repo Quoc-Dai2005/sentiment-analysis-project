@@ -82,8 +82,8 @@ pip install -r requirements.txt
 - Ngày nộp: 30/11/2025
 
 - Báo cáo PDF: `bao_cao_AI.pdf`
-- Slide 1: `Green-Modern-Simple-Cybersecurity-Presentation.pdf`
-- Slide 2: `Slide_AI.pdf`
+- Slide 1: `Slide_AI.pdf`
+- Slide 2: `Green-Modern-Simple-Cybersecurity-Presentation.pdf`
 
 Thành viên nhóm:
 
@@ -106,7 +106,7 @@ Thành viên nhóm:
 ├── requirements.txt
 ├── data/
 │ └── comments.csv # Dữ liệu đánh giá (1–5 sao)
-├── my_phobert_sentiment/ # Thư mục model đã fine-tune (tự sinh sau khi train)
+├── my_phobert_sentiment/ # Thư mục model đã fine-tune (tự sinh sau khi train, gửi trong file pdf gửi trên canvas)
 │ ├── config.json
 │ ├── pytorch_model.bin
 │ ├── tokenizer.json
@@ -217,7 +217,7 @@ text
   - Giữ `max_length` hợp lý (128).
   - Dùng batch size nhỏ + Gradient Accumulation.
   - Bật FP16 như trong notebook.  
-- File model đã train có thể >1GB – không nên upload trực tiếp lên GitHub, có thể lưu cục bộ hoặc dùng Git LFS / cloud.
+- File model đã train có thể >1GB – không upload trực tiếp lên GitHub, đã gửi link google drive trong file pdf gửi trên canvas
 
 ---
 
