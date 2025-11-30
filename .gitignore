@@ -8,5 +8,4 @@ __pycache__/
 *.pth
 *.safetensors
 results_phobert/
-my_phobert_sentiment/
-my-phobert-sentiment-final/
+my_phobert_sentiment

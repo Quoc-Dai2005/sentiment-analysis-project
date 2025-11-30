@@ -77,8 +77,7 @@ iface = gr.Interface(
         ["Hàng tạm ổn, giá hơi cao so với chất lượng."],
         ["Shop treo đầu dê bán thịt chó, lừa đảo."],
         ["Mọi thứ đều ổn, shipper thân thiện."]
-    ],
-    theme="default"
+    ]
 )
 
 if __name__ == "__main__":
